@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.send("Neha shailsh");
+  res.send("Data Science");
 });
 
 app.use("/api", require("./Routes/CreateUser"));
