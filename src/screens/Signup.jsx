@@ -16,18 +16,22 @@ export default function Signup() {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://gofood-6rpv.onrender.com/api/createuser", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: credentials.name,
-          email: credentials.email,
-          password: credentials.password,
-          location: credentials.geolocation,
-        }),
-      });
+      const response = await fetch(
+        "https://gofood-6rpv.onrender.com/api/createuser",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: credentials.name,
+            email: credentials.email,
+            password: credentials.password,
+            location: credentials.geolocation,
+          }),
+        }
+      );
+      console.log(response, "ghjk");
 
       if (!response.ok) {
         Swal.fire({
