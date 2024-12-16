@@ -6,7 +6,7 @@ const mongoDB = require("./db");
 // mongoDB();
 
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.setHeader("Access-Control-Allow-Origin", "*");
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-type, Accept"
@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.send("Hello World");
+  res.send("Neha shailsh");
 });
 
 app.use("/api", require("./Routes/CreateUser"));
